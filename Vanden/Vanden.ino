@@ -1,8 +1,8 @@
 #include <Adafruit_NeoPixel.h>
 
-#define PIN 2   // input pin Neopixel is attached to
+#define PIN 3   // input pin Neopixel is attached to
 
-#define NUMPIXELS      16 // number of neopixels in strip
+#define NUMPIXELS      38 // number of neopixels in strip
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
   int i=0;
