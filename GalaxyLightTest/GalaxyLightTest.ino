@@ -1,7 +1,7 @@
 #include <Adafruit_NeoPixel.h>
 
 #define PIN 5
- 
+
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = pin number (most are valid)
 // Parameter 3 = pixel type flags, add together as needed:
@@ -15,47 +15,21 @@ int(enforcerBlueNum) = 0;
 int(enforcerGoldNum) = 1;
 int(swRed) = 0;
 int(swBlue) = 1;
-
-void enforcersColorsFlashing ()
-{
-  //enforcerBlueNum = enforcerBlueNum;
-  //enforcerGoldNum = enforcerGoldNum;
- 
-  strip.setPixelColor(enforcerBlueNum, 15,8,56);
-  strip.setPixelColor(enforcerGoldNum, 255,208,0);
-  strip.show();
-  delay(500);
-
-  strip.setPixelColor(enforcerBlueNum, 0,0,0);
-  strip.setPixelColor(enforcerGoldNum, 0,0,0);
-
-  enforcerBlueNum++;
-  enforcerGoldNum++;  
-
-  if (enforcerBlueNum == 30){
-
-    enforcerBlueNum = 0;
-  }
-
-  if (enforcerGoldNum == 30){
-
-    enforcerGoldNum = 0;
-  }
-}
+int loopCounter = 0;
 
 void starWarsColorsFlashing() {
-  strip.setPixelColor(swBlue, 25, 143, 229);
-  strip.setPixelColor(swRed, 255, 0, 0);
-  swBlue=swBlue+1;
-  swRed=swRed+1;
-
-  }
+  
+      strip.setPixelColor(swBlue, 25, 143, 229);
+      strip.setPixelColor(swRed, 255, 0, 0);
+      
+  swBlue = swBlue + 1;
+  swRed = swRed + 1;  
+}
 
 void setup() {
   // put your setup code here, to run once:
   strip.begin();
-  strip.show(); // Initialize all pixels to 'off'
-
+  strip.show(); //Initialize all pixels to 'off'
 }
 
 void loop() {
