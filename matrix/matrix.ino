@@ -40,6 +40,9 @@ void face(){
      if(logo[row][column] == 1) {
        matrix.drawPixel(row,column,enforceyellow);
      }
+          if(logo[row][column] ==0 ) {
+       matrix.drawPixel(row,column,enforceblue);
+     }
    }
   }
   }
@@ -47,7 +50,7 @@ void face(){
  void wink(){
   int logo[16][16]={
     {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-{0,1,1,1,1,1,0,0,0,0,1,1,1,1,1,0},
+{1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,0},
 {0,1,1,1,1,1,0,0,0,0,1,1,1,1,1,0},
 {0,1,0,0,0,1,0,0,0,0,1,0,0,0,1,0},
 {0,1,0,1,1,1,0,0,0,0,1,1,1,0,1,0},
@@ -68,6 +71,9 @@ void face(){
      if(logo[row][column] == 1) {
        matrix.drawPixel(row,column,enforceyellow);
      }
+      if(logo[row][column] == 0) {
+       matrix.drawPixel(row,column,enforceblue);
+     }
    }
   }
   }
@@ -85,11 +91,14 @@ matrix.show();
 
 void loop() {
   // put your main code here, to run repeatedly:
-matrix.fillScreen(enforceblue);
+
 face();
 matrix.show();
+delay(5000);
+matrix.clear();
 delay(1000);
 wink();
 matrix.show();
 delay(1000);
+matrix.clear();
 }
