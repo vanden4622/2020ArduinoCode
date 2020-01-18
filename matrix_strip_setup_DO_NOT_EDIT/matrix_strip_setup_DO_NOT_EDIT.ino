@@ -24,5 +24,7 @@ strip.clear();
 
 void loop() {
   // put your main code here, to run repeatedly:
-
+matrix.fillScreen(matrix.Color(255,0,0));
+matrix.show();
+delay(1000);
 }
