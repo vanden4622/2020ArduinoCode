@@ -8,6 +8,7 @@
 #define PIN 4
 #define NUMPIXELS 256
 char var;
+char color
 Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(16, 16, PIN,
   NEO_MATRIX_TOP     + NEO_MATRIX_RIGHT +
   NEO_MATRIX_COLUMNS + NEO_MATRIX_PROGRESSIVE,
@@ -40,7 +41,7 @@ void face(){
      if(logo[row][column] == 1) {
        matrix.drawPixel(row,column,enforceyellow);
      }
-          if(logo[row][column] ==0 ) {
+          if(logo[row][column] ==0; ) {
        matrix.drawPixel(row,column,enforceblue);
      }
    }
@@ -85,7 +86,7 @@ matrix.begin();
 matrix.clear();
 strip.begin();
 strip.clear();
-matrix.setBrightness(40);
+matrix.setBrightness(25);
 matrix.show();
 Serial.begin(9600);
 
