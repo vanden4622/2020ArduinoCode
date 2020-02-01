@@ -168,7 +168,7 @@ matrix.begin();
 matrix.clear();
 strip.begin();
 strip.clear();
-matrix.setBrightness(25);
+matrix.setBrightness(50);
 matrix.show();
 Serial.begin(9600);
 color=0;
