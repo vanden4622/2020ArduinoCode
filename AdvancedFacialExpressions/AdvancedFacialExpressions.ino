@@ -5,7 +5,7 @@
 #include <Adafruit_NeoPixel.h>
 #include <Adafruit_NeoMatrix.h>
 #include <gamma.h>
-#define PIN 4
+#define PIN 5
 #define NUMPIXELS 256
 char var;
 int color;
@@ -17,8 +17,8 @@ Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(12, 12, PIN,
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 uint32_t enforcerYellow = matrix.Color(253, 209, 9);
 uint32_t enforcerBlue = matrix.Color(18, 14, 56);
-uint32_t vermillionRed = matrix.Color(31, 235, 253);
-uint32_t darkRed = matrix.Color(204, 0, 0);
+uint32_t vermillionRed = matrix.Color(227, 66, 52);
+uint32_t brickRed=matrix.Color(203, 65, 84);
 uint32_t skyBlue = matrix.Color(0, 170, 255);
 uint32_t black = matrix.Color(0, 0, 0);
 
@@ -289,7 +289,7 @@ int face[12][12] = {
           matrix.drawPixel(row, column, enforcerBlue);
           }
         if(face[row][column] == 2){
-          matrix.drawPixel(row, column, darkRed);
+          matrix.drawPixel(row, column, brickRed);
         }
       }
     }
