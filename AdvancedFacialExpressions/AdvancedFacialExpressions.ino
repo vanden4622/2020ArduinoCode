@@ -311,39 +311,54 @@ screen=0;
 
 void loop() {
   // put your main code here, to run repeatedly:
-if(Serial.available() >0){
+  if(Serial.available() > 0){
 var=Serial.read();
-if(var=='w'){
-  screen++;
-}
-if(screen & 0x01){
+if(var=='c'){
   natural();
   matrix.show();
-  if(var=='e'){
-  //lightsaberclashing();
-    matrix.show();
-    delay(500);
+  delay(255);
 }
-}
-if(screen % 2 == 0){
-face();
-matrix.show();
-if(var=='q'){
-  color++;
-  if(color % 2 == 0){
-    enforceblue=matrix.Color(18,14,56);
-  }
-    if (color & 0x01){
-    enforceblue=matrix.Color(255,0,0);
-  }
-}
-if(var=='a'){
-  Serial.println("winking");
+if(var=='d'){
   wink();
   matrix.show();
-  delay(500);
-  Serial.println("winking complete");
+  delay(255);
 }
+if(var=='f'){
+  frown();
+  matrix.show();
+  delay(255);
 }
+if(var=='h'){
+  beautiful();
+  matrix.show();
+  delay(255);
 }
+if(var=='i'){
+  crossEyes();
+  matrix.show();
+  delay(255);
+}
+if(var=='j'){
+  openFace();
+  matrix.show();
+  delay(255);
+}
+if(var=='k'){
+  faceWithHalo();
+  matrix.show();
+  delay(255);
+}
+if(var=='l'){
+  rollingEyes();
+  matrix.show();
+  delay(255);
+}
+if(var=='m'){
+  faceWithGlasses();
+  matrix.show();
+  delay(255);
+}
+  
+}
+
 }
