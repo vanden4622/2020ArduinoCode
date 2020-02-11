@@ -20,6 +20,7 @@ boolean down = true;
 void strip(){
   strip1.setPixelColor(i,255,0,0);
   strip1.show();
+  delay(500);
   i++;
 }
 void fade(){
@@ -57,6 +58,4 @@ x++;
 down=true;
 }
 }
-
-  delay(5);
 }
