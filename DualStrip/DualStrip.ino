@@ -47,16 +47,17 @@ void loop() {
 
 
 
-if(down){
+if(down=true){
 x--;
-if(x=255){
+if(x=0){
   down = !down;
 }
 else{
 x++;
+ if(x=255){
 down=true;
+ }
 }
 }
-
   delay(5);
 }
