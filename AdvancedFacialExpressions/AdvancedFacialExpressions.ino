@@ -7,6 +7,7 @@
 #include <gamma.h>
 #define PIN 5
 #define NUMPIXELS 256
+
 char var;
 int color;
 int screen;
