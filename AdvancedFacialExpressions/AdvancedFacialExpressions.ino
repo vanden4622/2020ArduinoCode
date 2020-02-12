@@ -8,6 +8,8 @@
 #define PIN 5
 #define NUMPIXELS 256
 
+//ha ha
+
 char var;
 int color;
 int screen;
